@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Deadline Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1 class="title">
+    <img src="logo.png" class="logo">
+    Smart Deadline Calendar 📅 
+</h1>
+<p class="subtitle">Kelola tugas & deadline kamu dengan lebih rapi 📚</p>
+
+<div id="notifBox"></div>
+<div class="progress-bar">
+  <div id="progressFill"></div>
+</div>
+
+<!-- TAMBAH AGENDA -->
+<div class="section">
+  <h3>➕ Tambah Agenda</h3>
+
+  <input type="text" id="task" placeholder="Masukkan Agenda">
+  <input type="date" id="date">
+
+  <select id="priority">
+    <option value="high">Prioritas Tinggi</option>
+    <option value="medium">Prioritas Sedang</option>
+    <option value="low">Prioritas Rendah</option>
+  </select>
+
+  <select id="type">
+    <option value="Tugas">Tugas</option>
+    <option value="Ujian">Ujian</option>
+    <option value="Acara">Acara</option>
+  </select>
+
+  <button onclick="addTask()">Tambah</button>
+</div>
+
+<!-- TOP PRIORITAS -->
+<div class="section">
+  <h3>⭐ Top 3 Prioritas</h3>
+  <ul id="topPriority"></ul>
+</div>
+
+<!-- SEARCH -->
+<div class="section">
+  <h3>🔍 Cari Tugas</h3>
+  <input type="text" id="search" placeholder="Cari tugas..." onkeyup="searchTask()">
+</div>
+
+<!-- TODO LIST -->
+<div class="section">
+  <h3>📝 To Do List</h3>
+  <ul id="todoList"></ul>
+</div>
+
+<!-- KALENDER -->
+<div class="section">
+  <h3>📅 Kalender Bulanan</h3>
+  <div class="calendar" id="calendar"></div>
+</div>
+
+<p class="footer">© 2026 Smart Deadline Calendar</p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
